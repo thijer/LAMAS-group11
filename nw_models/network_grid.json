@@ -1,0 +1,248 @@
+{
+    "description": "This file describes an evenly distributed mesh topology.",
+    "x_dim": 8,
+    "y_dim": 8,
+    "networks":
+    {
+        "01":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "02",
+                "05"
+            ],
+            "kb":[
+                "p"
+            ],
+            "x": 0,
+            "y": 6
+        },
+        "02":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "03",
+                "01",
+                "06"
+            ],
+            "kb":[
+            ],
+            "x": 2,
+            "y": 6
+        },
+        "03":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "04",
+                "02",
+                "07"
+            ],
+            "kb":[
+            ],
+            "x": 4,
+            "y": 6
+        },
+        "04":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "03",
+                "08"
+            ],
+            "kb":[
+            ],
+            "x": 6,
+            "y": 6
+        },
+        "05":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "01",
+                "06",
+                "09"
+            ],
+            "kb":[
+            ],
+            "x": 0,
+            "y": 4
+        },
+        "06":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "05",
+                "02",
+                "07",
+                "10"
+            ],
+            "kb":[
+            ],
+            "x": 2,
+            "y": 4
+        },
+        "07":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "03",
+                "06",
+                "08",
+                "11"
+            ],
+            "kb":[
+            ],
+            "x": 4,
+            "y": 4
+        },
+        "08":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "04",
+                "07",
+                "12"
+            ],
+            "kb":[
+            ],
+            "x": 6,
+            "y": 4
+        },
+        "09":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "05",
+                "10",
+                "13"
+            ],
+            "kb":[
+            ],
+            "x": 0,
+            "y": 2
+        },
+        "10":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "06",
+                "09",
+                "11",
+                "14"
+            ],
+            "kb":[
+            ],
+            "x": 2,
+            "y": 2
+        },
+        "11":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "07",
+                "10",
+                "12",
+                "15"
+            ],
+            "kb":[
+            ],
+            "x": 4,
+            "y": 2
+        },
+        "12":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "08",
+                "11",
+                "16"
+            ],
+            "kb":[
+            ],
+            "x": 6,
+            "y": 2
+        },
+        "13":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "09",
+                "14"
+            ],
+            "kb":[
+            ],
+            "x": 0,
+            "y": 0
+        },
+        "14":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "13",
+                "10",
+                "15"
+            ],
+            "kb":[
+            ],
+            "x": 2,
+            "y": 0
+        },
+        "15":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "11",
+                "14",
+                "16"
+            ],
+            "kb":[
+            ],
+            "x": 4,
+            "y": 0
+        },
+        "16":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "12",
+                "15"
+            ],
+            "kb":[
+            ],
+            "x": 6,
+            "y": 0
+        }
+    },
+    "simulation":
+    {
+        "description": "test",
+        "actions":
+        [
+            {
+                "id": "04",
+                "state": "DISABLED",
+                "step": 5
+            }
+        ],
+        "start": 5,
+        "stop_condition": "synced",
+        "stop_timeout": 100
+    }
+}
