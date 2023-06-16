@@ -22,5 +22,34 @@ class PrivateAnnouncement:
         result = self.inner.semantic(restricted_model, world_to_test)
         return result
 
+class CommonKnowledge:
+    def __init__(self, inner) -> None:
+        self.inner = inner
+    
+    def semantic(self, ks: KripkeStructure, world_to_test):
+        # Create set of all relations
+        relations = set()
+        for key, value in ks.relations.items():
+            relations = relations.union(value)
+        
+        # Create transitive relations until complete
+        unfinished = True
+        while(unfinished):
+            unfinished = False
+            updates = set()
+            for rel1 in relations:
+                for rel2 in relations:
+                    if(rel1[1] == rel2[0] and (rel1[0], rel2[1]) not in relations):
+                        updates.add((rel1[0], rel2[1]))
+                        unfinished = True
+            relations = relations.union(updates)
+        
+        # Check for all relations
+        result = True
+        for relation in relations:
+            if relation[0] == world_to_test:
+                result = result and self.inner.semantic(ks, relation[1])
+        return result
+
 
         
