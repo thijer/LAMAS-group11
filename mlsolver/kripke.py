@@ -42,13 +42,13 @@ class KripkeStructure:
                 self.worlds.remove(world)
 
         if isinstance(self.relations, set):
-            for (start_node, end_node) in self.relations.copy():
+            for start_node, end_node in self.relations.copy():
                 if start_node == node_name or end_node == node_name:
                     self.relations.remove((start_node, end_node))
 
         if isinstance(self.relations, dict):
             for key, value in self.relations.items():
-                for (start_node, end_node) in value.copy():
+                for start_node, end_node in value.copy():
                     if start_node == node_name or end_node == node_name:
                         value.remove((start_node, end_node))
 
@@ -61,14 +61,14 @@ class KripkeStructure:
         for w in self.worlds:
             worlds_by_name.append(w.name)
         for z in chain.from_iterable(
-                combinations(worlds_by_name, r + 1)
-                for r in range(len(worlds_by_name) + 1)):
+            combinations(worlds_by_name, r + 1) for r in range(len(worlds_by_name) + 1)
+        ):
             sub_set.append(set(z))
         return sub_set
 
     def nodes_not_follow_formula(self, formula):
         """Returns a list with all worlds of Kripke structure, where formula
-         is not satisfiable
+        is not satisfiable
         """
         nodes_not_follow_formula = []
         for nodes in self.worlds:
@@ -77,17 +77,17 @@ class KripkeStructure:
         return nodes_not_follow_formula
 
     def __eq__(self, other):
-        """Returns true iff two Kripke structures are equivalent
-        """
-        if (self.worlds == [] and not other.worlds == []) \
-                or (not self.worlds == [] and other.worlds == []):
+        """Returns true iff two Kripke structures are equivalent"""
+        if (self.worlds == [] and not other.worlds == []) or (
+            not self.worlds == [] and other.worlds == []
+        ):
             return False
-        for (i, j) in zip(self.worlds, other.worlds):
+        for i, j in zip(self.worlds, other.worlds):
             if not i.__eq__(j):
                 return False
 
         if isinstance(self.relations, set):
-            for (i, j) in zip(self.relations, other.relations):
+            for i, j in zip(self.relations, other.relations):
                 if not i == j:
                     return False
 
@@ -101,11 +101,22 @@ class KripkeStructure:
                         return False
         return True
 
-    def __str__(self):
+    def __repr__(self):
         worlds_str = "(W = {"
         for world in self.worlds:
             worlds_str += str(world)
-        return worlds_str + '}, R = ' + str(self.relations) + ')'
+        return worlds_str + "}, R = " + str(self.relations) + ")"
+
+    def __str__(self):
+        worlds_str = "(\nW = {\n"
+        for world in self.worlds:
+            worlds_str += "\t" + str(world) + "\n"
+        return (
+            worlds_str
+            + "\n}, \nR = \n\t"
+            + "\n\t".join("{0}: {1}".format(k, v) for k, v in self.relations.items())
+            + "\n)"
+        )
 
 
 class World:
@@ -122,7 +133,7 @@ class World:
         return self.name == other.name and self.assignment == other.assignment
 
     def __str__(self):
-        return "(" + self.name + ',' + str(self.assignment) + ')'
-    
+        return "(" + self.name + "," + str(self.assignment) + ")"
+
     def __hash__(self) -> int:
         return hash(str(self))
