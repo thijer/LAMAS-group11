@@ -1,4 +1,5 @@
 from mlsolver.kripke import KripkeStructure
+from mlsolver.formula import Box_a
 
 class PrivateAnnouncement:
     def __init__(self, agents: set, announcement, inner) -> None:
@@ -12,11 +13,39 @@ class PrivateAnnouncement:
 
         # Create subset of relations
         relations = {}
-        for agent in self.agents:
-            relations[agent] = set()
-            for relation in ks.relations[agent]:
-                if(relation[1] not in ex_worlds):
-                    relations[agent].add(relation)
+        for agent, rels in ks.relations.items():
+            if(agent in self.agents):
+                relations[agent] = set()
+                for relation in rels:
+                    if(relation[1] not in ex_worlds):
+                        relations[agent].add(relation)
+            else:
+                relations[agent] = rels
+        
+        restricted_model = KripkeStructure(ks.worlds, relations)
+        result = self.inner.semantic(restricted_model, world_to_test)
+        return result
+
+class PrivateAnnouncementV2:
+    def __init__(self, agents: set, announcement, inner) -> None:
+        self.agents = agents
+        self.announcement = announcement
+        self.inner = inner
+    
+    def semantic(self, ks: KripkeStructure, world_to_test):
+        # Create list of worlds where announcement does not hold
+        ex_worlds = ks.nodes_not_follow_formula(self.announcement)
+
+        # Create subset of relations
+        relations = {}
+        for agent, rels in ks.relations.items():
+            if(agent in self.agents):
+                relations[agent] = set()
+                for relation in rels:
+                    if(relation[1] not in ex_worlds and relation[0] == world_to_test):
+                        relations[agent].add(relation)
+            else:
+                relations[agent] = rels
         
         restricted_model = KripkeStructure(ks.worlds, relations)
         result = self.inner.semantic(restricted_model, world_to_test)
@@ -51,5 +80,32 @@ class CommonKnowledge:
                 result = result and self.inner.semantic(ks, relation[1])
         return result
 
-
+class EveryoneKnows:
+    def __init__(self, inner) -> None:
+        self.inner = inner
+    
+    def semantic(self, ks: KripkeStructure, world_to_test):
+        wtt_suffix = world_to_test[3:]
         
+        # Create set of all relations
+        result = True
+        for agent, value in ks.relations.items():
+            wtt = agent + "_" + wtt_suffix
+            result = result and Knows(agent, self.inner).semantic(ks, wtt)
+        return result
+
+# Aliases
+class Knows(Box_a):
+    pass
+
+class PrA(PrivateAnnouncement):
+    pass
+
+class PrA2(PrivateAnnouncementV2):
+    pass
+
+class C(CommonKnowledge):
+    pass
+
+class E(EveryoneKnows):
+    pass

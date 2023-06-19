@@ -1,0 +1,63 @@
+{
+    "description": "4x4 grid",
+    "x_dim": 8,
+    "y_dim": 8,
+    "networks":
+    {
+        "01":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "02",
+                "03"
+            ],
+            "kb":[
+                "p"
+            ],
+            "x": 0,
+            "y": 0
+        },
+        "02":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "01",
+                "04"
+            ],
+            "kb":[
+                "p"
+            ],
+            "x": 0,
+            "y": 2
+        },
+        "03":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "01",
+                "04"
+            ],
+            "kb":[
+                "p"
+            ],
+            "x": 0,
+            "y": 2
+        },
+        "04":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "02",
+                "03"
+            ],
+            "kb":[
+            ],
+            "x": 0,
+            "y": 2
+        }
+    }
+}

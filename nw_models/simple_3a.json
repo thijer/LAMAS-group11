@@ -22,27 +22,25 @@
             "state": "ENABLED",
             "neighbours":
             [
-                "01"
+                "01", "03"
+            ],
+            "kb":[
+                "p"
+            ],
+            "x": 0,
+            "y": 1
+        },
+        "03":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "02"
             ],
             "kb":[
             ],
             "x": 0,
             "y": 2
         }
-    },
-    "simulation":
-    {
-        "description": "test",
-        "actions":
-        [
-            {
-                "id": "04",
-                "state": "DISABLED",
-                "step": 5
-            }
-        ],
-        "start": 5,
-        "stop_condition": "synced",
-        "stop_timeout": 100
     }
 }
