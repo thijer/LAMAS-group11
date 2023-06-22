@@ -1,5 +1,5 @@
 {
-    "description": "4x4 grid",
+    "description": "2x2 grid, where 01, 02, and 03 know \"p\", but 04 does not",
     "x_dim": 8,
     "y_dim": 8,
     "networks":

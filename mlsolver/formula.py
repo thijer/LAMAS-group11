@@ -167,7 +167,7 @@ class Implies:
         return self.left == other.left and self.right == other.right
 
     def __str__(self):
-        return "(" + self.left.__str__() + " -> " + self.right.__str__() + ")"
+        return "(" + self.left.__str__() + " \u2192 " + self.right.__str__() + ")"
 
 
 class Not:
@@ -185,7 +185,8 @@ class Not:
         return self.inner == other.inner
 
     def __str__(self):
-        return u"\uFFE2" + str(self.inner)
+        return u"\u00AC" + str(self.inner)
+        # return u"\uFFE2" + str(self.inner)
 
 
 class And:
