@@ -1,6 +1,7 @@
 from formula_extended import PrivateAnnouncement, CommonKnowledge
 from mlsolver.formula import *
 from mlsolver.kripke import KripkeStructure, World
+from mlsolver.tableau import ProofTree
 from converter import convert
 from param import *
 import json
@@ -13,6 +14,15 @@ if __name__ == "__main__":
 
     # formula = PrivateAnnouncement({"01", "02"}, Atom("p"), Box_a("02", Atom("p")))
     formula = PrivateAnnouncement({"01", "02"}, Atom("p"), CommonKnowledge(Atom("p")))
-    world = "0"
+
+    world = "3"
     test = formula.semantic(kripkemodel, world)
-    pass
+
+    # model = kripkemodel.solve(f)
+
+    print(test)
+
+    pt = ProofTree(formula)
+    pt.derive()
+
+    print(pt)
