@@ -45,3 +45,6 @@ pnpm build --emptyOutDir
 
 Changes are made on /src directory. Content.vue file inside the /src/components folder has all the content from the report.
 [Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/) is used as component library and [Vue3](https://vuejs.org/) as framework.
+
+## Build
+CI/CD is not configured yet, so manual build is necesarry to update the github site. You need to run the build command ```npm run build``` inside the site folder, or run ```npm run build --prefix site``` if you are on the root repo folder. Then commit the changes and push.
