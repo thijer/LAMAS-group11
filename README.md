@@ -8,7 +8,7 @@
    ```pip install -r requirements.txt```
 3. Run script
    
-   ```python converter.py```
+   ```python test_v2.py```
 
 
 
