@@ -127,8 +127,8 @@
               consequences of communication between agents.</p>
             <p>
               In DEL, agents are characterized by their knowledge and beliefs. For example,
-              the operator Kaφ represents “Agent a knows that φ,” indicating that agent
-              a is certain about the truth of φ. Similarly, the operator Baφ represents “Agent
+              the operator <em>K</em><sub>a</sub>Φ represents “Agent a knows that Φ,” indicating that agent
+              a is certain about the truth of φ. Similarly, the operator B<sub>a</sub>φ represents “Agent
               a believes that φ” indicating that agent a considers φ to be true, but may not
               be certain.
             </p>
@@ -146,7 +146,7 @@
               base KB being a set of propositional atoms. The union of all knowledge bases
               constitutes the system knowledge K.</p>
             <p>From each network model, a Kripke model can be derived, which is done
-              as follows: a × 2n worlds are created, where n is the number of atoms in the
+              as follows: a × 2<sup>n</sup> worlds are created, where n is the number of atoms in the
               system knowledge K and a the number of agents. Each agent therefore has a
               copy of all possible atom valuation combinations, which can be thought of as
               the agent’s perspective P of the knowledge in the system. A visualization of a
@@ -162,7 +162,7 @@
             <p>
               where <em>π</em><sub><em>p</em></sub>(<em>w</em><sub>1</sub>) is the valuation of <em>p</em> in world
               <em>w</em><sub>1</sub>, <em>P</em><sub><em>a</em></sub> the set of worlds belonging
-              to agent a’s perspective, and <em>K</em><em>B</em><sub><em>a</em></sub> the knowledge base of a
+              to agent a’s perspective, and <em>K</em><em>B</em><sub><em>a</em></sub> the knowledge base of a.
             </p>
             <p>This can be translated roughly to that there will be no relation from a world
               <em>w</em><sub>0</sub> in the agent’s perspective to a world <em>w</em><sub>1</sub> in the agent’s
@@ -190,11 +190,11 @@
               involved agent’s perspectives are untouched.</p>
 
             <p>For a private announcement involving n agents:</p>
-            <p><span
-                class="math inline"><em>P</em> = <em>P</em><sub>0</sub> ∪ ... ∪ <em>P</em><sub><em>n</em></sub></span> Set
+            <p class="text-center"><span
+                class="math inline"><em>P</em> = <em>P</em><sub>0</sub> ∪ ... ∪ <em>P</em><sub><em>n</em></sub></span>&emsp; Set
               of worlds included in the announcement.</p>
-            <p><span class="math inline"><em>R</em> = {<em>R</em><sub>0</sub>, ...<em>R</em><sub><em>n</em></sub>}</span>
-              Set of all involved agent's relations.</p>
+            <p class="text-center"><span class="math inline"><em>R</em> = {<em>R</em><sub>0</sub>, ...<em>R</em><sub><em>n</em></sub>}</span>
+            &emsp; Set of all involved agent's relations.</p>
 
 
             <p>
@@ -217,7 +217,7 @@
                   <v-card-title class="text-h6">
                     Figure 1
                     <br>
-                    <span class="text-caption">caption</span>
+                    <!-- <span class="text-caption">caption</span> -->
                   </v-card-title>
                 </v-card>
               </v-col>
@@ -232,7 +232,7 @@
             <p>The associated network model of this example can be found in figure 1, where
               the edges indicate which agent can communicate with which agent. In this state,
               the payment has not yet been made. The corresponding Kripke model can be
-              found in 2.</p>
+              found in figure 2.</p>
             <v-row class="d-flex align-center justify-center pa-5  text-justify">
               <v-col cols="auto">
                 <v-card class="text-center" width="auto">
@@ -250,7 +250,7 @@
                   <v-card-title class="text-h6">
                     Figure 2
                     <br>
-                    <span class="text-caption">caption</span>
+                    <!-- <span class="text-caption">caption</span> -->
                   </v-card-title>
                 </v-card>
               </v-col>
@@ -270,7 +270,7 @@
                   <v-card-title class="text-h6">
                     Figure 3
                     <br>
-                    <span class="text-caption">caption</span>
+                    <!-- <span class="text-caption">caption</span> -->
                   </v-card-title>
                 </v-card>
               </v-col>
@@ -290,7 +290,7 @@
                   <v-card-title class="text-h6">
                     Figure 4
                     <br>
-                    <span class="text-caption">caption</span>
+                    <!-- <span class="text-caption">caption</span> -->
                   </v-card-title>
                 </v-card>
               </v-col>
@@ -310,7 +310,7 @@
                   <v-card-title class="text-h6">
                     Figure 5
                     <br>
-                    <span class="text-caption">caption</span>
+                    <!-- <span class="text-caption">caption</span> -->
                   </v-card-title>
                 </v-card>
               </v-col>
