@@ -42,7 +42,6 @@ class PrivateAnnouncement:
     
     def __str__(self) -> str:
         # if isinstance(self.inner, Atom):
-        return "PrA_{0}[{1}] {2}".format(self.agents, self.announcement, self.inner)
         # else:
         #     return "PrA_{0}[{1}] ({2})".format(self.agents, self.announcement, self.inner)
         return "PrA_{0}[{1}] {2}".format(self.agents, self.announcement, self.inner)

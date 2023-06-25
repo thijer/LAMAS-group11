@@ -3,9 +3,12 @@
 
 ### How to run the simulation
 1. Install python>3.7 
+<!-- 2. Install requirements
+   
+   ```pip install -r requirements.txt``` -->
 2. Run script
    
-   ```python converter.py```
+   ```python test_v2.py```
 
 
 

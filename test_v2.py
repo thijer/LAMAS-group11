@@ -2,7 +2,7 @@ from formula_extended import *
 from mlsolver.formula import Not
 import mlsolver.formula
 from mlsolver.kripke import KripkeStructure, World
-from converter import gc, convert_v3 as convert
+from converter import gc, convert_v4 as convert
 from param import *
 import json
 
@@ -13,11 +13,11 @@ def evaluate(desc, formula, ks, wtt):
     print()
 
 def test_2x2():
-    with open(DIR_NW_MODELS + "2x2" + ".json", 'r') as json_file:
+    with open(DIR_NW_MODELS + "2x2_2f" + ".json", 'r') as json_file:
         model = json.load(json_file)
     km = convert(model["networks"])
     world = "04_0"
-    
+
     # At first, 04 does not know "p".
     evaluate(
         "At first, 04 does not know \"p\".",
@@ -43,14 +43,14 @@ def test_2x2():
     )
 
     evaluate(
-        "After PA(2,3), Everyone knows \"p\" but \"p\" is not common knowledge.",
+        "After PA(3,4), Everyone knows \"p\" but \"p\" is not common knowledge.",
         PrA({"03", "04"}, Atom("p"), And(E(Atom("p")), Not(C(Atom("p"))))),
         km, world
     )
 
     evaluate(
-        "After PA(1,2,3), 04 knows that 03 and 01 know \"p\", but not that 02 knows \"p\"",
-        PrA({"03", "04", "01"}, Atom("p"), 
+        "After PA(1,3,4), 04 knows that 03 and 01 know \"p\", but not that 02 knows \"p\"",
+        PrA({"01", "03", "04"}, Atom("p"), 
             And(
                 Knows("04", K("03", Atom("p"))),
                 Knows("03", K("04", Atom("p"))),
@@ -202,6 +202,13 @@ def test_simple_3a():
         ),
         km, world
     )
+
+def test_transaction():
+    with open(DIR_NW_MODELS + "transaction" + ".json", 'r') as json_file:
+        model = json.load(json_file)
+    km = convert(model["networks"])
+    print(km)    
+    pass
 
 if __name__ == "__main__":
     test_simple_3a()
