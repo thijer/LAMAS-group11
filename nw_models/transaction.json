@@ -1,0 +1,48 @@
+{
+    "description": "This file describes an evenly distributed mesh topology.",
+    "x_dim": 8,
+    "y_dim": 8,
+    "networks":
+    {
+        "ps":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "am",
+                "bk"
+            ],
+            "kb":[
+                "p"
+            ],
+            "x": 0,
+            "y": 0
+        },
+        "am":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "ps", "bk"
+            ],
+            "kb":[
+            ],
+            "x": 0,
+            "y": 1
+        },
+        "bk":
+        {
+            "state": "ENABLED",
+            "neighbours":
+            [
+                "ps",
+                "bk"
+            ],
+            "kb":[
+                "p"
+            ],
+            "x": 0,
+            "y": 2
+        }
+    }
+}
