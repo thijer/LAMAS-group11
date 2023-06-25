@@ -1,4 +1,4 @@
-# default
+# Getting Started
 
 ## Project setup
 
@@ -35,12 +35,13 @@ Running this will empty the docs folder and write the new build to deploy.
 yarn build --emptyOutDir
 
 # npm
-npm run build --emptyOutDir
+npm run build
 
 # pnpm
 pnpm build --emptyOutDir
 ```
 
-### Customize configuration
+## How to make changes
 
-See [Configuration Reference](https://vitejs.dev/config/).
+Changes are made on /src directory. Content.vue file inside the /src/components folder has all the content from the report.
+[Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/) is used as component library and [Vue3](https://vuejs.org/) as framework.
