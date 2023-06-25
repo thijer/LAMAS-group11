@@ -107,10 +107,10 @@
             <p>The model would need to accurately model the various worlds created by
               the network structure and the traffic routing. The various nodes in the network
               would be the agents in our model, the routing of traffic would govern their
-              knowledge and belief about the state of the network. We have included private announcements
-              for node communication and created both a simple model
-              with reliable agents and one that models a network that contains an amount of
-              unreliable agents</p>
+              knowledge and belief about the state of the network. We have implemented private announcements
+              as the means for node communication, and created a few network models which we used to evaluate the behaviour 
+              of private announcements and the spread of knowledge through the network.
+            </p>
           </v-sheet>
         </v-col>
       </v-row>
@@ -149,8 +149,8 @@
               as follows: a × 2n worlds are created, where n is the number of atoms in the
               system knowledge K and a the number of agents. Each agent therefore has a
               copy of all possible atom valuation combinations, which can be thought of as
-              the agent’s perspective P of the knowledge in the system. A visualization of a
-              Kripke model with no knowledge about p can be found in figure 2.</p>
+              the agent’s perspective P of the knowledge in the system.
+            </p>
             <p>A relation between world <em>w</em><sub>0</sub> and <em>w</em><sub>1</sub> for agent a is made if:</p>
             <br>
             <p class="text-p2 text-center"><span
@@ -167,7 +167,7 @@
             <p>This can be translated roughly to that there will be no relation from a world
               <em>w</em><sub>0</sub> in the agent’s perspective to a world <em>w</em><sub>1</sub> in the agent’s
               perspective where p
-              doesn’t hold if p is in the agents’ knowledge base, or if the relation points to a
+              doesn’t hold if p is in the agents’ knowledge base, and if the relation points to a
               world <em>w</em><sub>1</sub> not in the agent’s perspective
             </p>
 
@@ -232,7 +232,7 @@
             <p>The associated network model of this example can be found in figure 1, where
               the edges indicate which agent can communicate with which agent. In this state,
               the payment has not yet been made. The corresponding Kripke model can be
-              found in 2.</p>
+              found in figure 2.</p>
             <v-row class="d-flex align-center justify-center pa-5  text-justify">
               <v-col cols="auto">
                 <v-card class="text-center" width="auto">
