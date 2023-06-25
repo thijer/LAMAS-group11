@@ -1,113 +1,18 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>LAMAS Project</title>
-    <meta name="description" content="LAMAS Project">
-    <meta name="author" content="">
-
-    <!--link rel="icon" href="/favicon.ico"-->
-    <!--link rel="icon" href="/favicon.svg" type="image/svg+xml"-->
-    <!--link rel="apple-touch-icon" href="/apple-touch-icon.png"-->
-
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
-
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/testPage/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAMAS 2023 - Group 11</title>
+  <script type="module" crossorigin src="/testPage/assets/index-caa0a76e.js"></script>
+  <link rel="stylesheet" href="/testPage/assets/index-a49c484f.css">
 </head>
 
 <body>
-    <h1>LAMAS Project</h1>
-    <div class="tabs">
-        <ul>
-            <li title="Introduction">Introduction</li>
-            <li title="Networks">Networks</li>
-            <li title="Formalism">Formalism</li>
-            <li title="Simulation">Simulation</li>
-            <li title="Discussion">Discussion</li>
-            <li title="References">References</li>
-        </ul>
-        <div class="content">
-            <section>
-                <h2>Introduction</h2>
-                <div>
-                    In this project we aim to evaluate the propagation of knowledge through a distributed system, where
-                    nodes (or processors) are sparsely connected to each other. For instance, new knowledge obtained by
-                    node
-                    A which can be a sensor reading needs to be transferred throughout the network so all the nodes know
-                    about it, which can be done with public announcement logic. Additionally, knowledge can also be
-                    updated
-                    so facts that were valid at <em>t</em> are not valid at <em>t+1</em>.
-
-                    Topics to investigate:
-                    <ul>
-                        <li>Knowledge propagation.</li>
-                        <li>Updating information.</li>
-                        <li>Conflict resolution.</li>
-                        <li>Changes in network topology.</li>
-                    </ul>
-
-                    Our research question is:
-
-                    Can the knowledge contained in a dynamically changing decentralized communications network be
-                    accurately modelled using Kripke models?
-
-                    The model would need to accurately model the various worlds created by the network structure and the
-                    traffic routing. The various nodes in the network would be the agents in our model, the routing of
-                    traffic would govern their knowledge and belief about the state of the network. We would look to
-                    include both public announcements and common knowledge into our model.
-
-                    We aim to implement as part of our website a small simulation of a network evolving and the
-                    knowledge of the nodes, as well as the Kripke model representing this simulated network.
-
-                    The way the model will evolve will cover the information propagating through the network, changes to
-                    the network including new nodes being added, nodes removed and temporary breaks in connections
-                    resulting in routing changes. We could consider adding deletion errors if it does not add too much
-                    complexity.
-                </div>
-            </section>
-            <section>
-                <h2>Formalism</h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quas adipisci a accusantium eius ut
-                voluptatibus ad impedit nulla, ipsa qui. Quasi temporibus eos commodi aliquid impedit amet, similique
-                nulla.
-
-                <h3>All agents are reliable</h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quas adipisci a accusantium eius ut
-                voluptatibus ad impedit nulla, ipsa qui. Quasi temporibus eos commodi aliquid impedit amet, similique
-                nulla.
-
-                <h3>With unreliable agents</h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quas adipisci a accusantium eius ut
-                voluptatibus ad impedit nulla, ipsa qui. Quasi temporibus eos commodi aliquid impedit amet, similique
-                nulla.
-            </section>
-            <section>
-                <h2>Simulation</h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae
-                architecto libero reprehenderit aliquam magnam ratione quidem? Nobis doloribus molestiae enim deserunt
-                necessitatibus eaque quidem incidunt.
-            </section>
-            <section>
-                <h2>Discussion</h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae
-                architecto libero reprehenderit aliquam magnam ratione quidem? Nobis doloribus molestiae enim deserunt
-                necessitatibus eaque quidem incidunt.
-            </section>
-            <section>
-                <h2>References</h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae
-                architecto libero reprehenderit aliquam magnam ratione quidem? Nobis doloribus molestiae enim deserunt
-                necessitatibus eaque quidem incidunt.
-            </section>
-        </div>
-    </div>
-
-
-
-    <!--script src="js/scripts.js"></script-->
+  <div id="app"></div>
+  
 </body>
 
 </html>
