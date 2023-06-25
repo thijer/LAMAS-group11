@@ -48,14 +48,14 @@
             </v-card-title>
           </v-card>
         </v-col>
-        
+
       </v-row>
 
       <v-row class="d-flex align-center justify-center pa-5 text-justify" id="intro">
         <v-col cols="auto">
           <v-sheet>
             <h1 class="text-h4 font-weight-bold" id="Introduction">Introduction</h1>
-            <p>Modern computer networks, consist of multiple dispersed systems that communicate and collaborate. 
+            <p>Modern computer networks, consist of multiple dispersed systems that communicate and collaborate.
                 Often these networks will have to maintain a consensus
                 with regard to the information on the network. Each node in the network has
                 its knowledge and beliefs about the state of the network, the transactions, or
@@ -70,8 +70,8 @@
               reason about the knowledge and beliefs of the nodes in the network.
             </p>
             <p>
-              There are many ways in which epistemic logic can be applied to modern decentralized 
-              computer systems: knowledge representation, fault tolerance, consensus 
+              There are many ways in which epistemic logic can be applied to modern decentralized
+              computer systems: knowledge representation, fault tolerance, consensus
               protocols, and reasoning regarding security and privacy.
             </p>
             <p>
@@ -97,7 +97,7 @@
             <p class="font-italic text-center">Can the knowledge propagated using private announcements in a decentralized
             system be accurately modelled using Kripke models?</p>
             <p>The model would need to accurately model the various worlds created by
-            the network structure and the traffic routing. The various nodes in the network 
+            the network structure and the traffic routing. The various nodes in the network
             would be the agents in our model, the routing of traffic would govern their
             knowledge and belief about the state of the network. We have included private announcements
             for node communication and created both a simple model
@@ -118,7 +118,7 @@
             the effects of actions on knowledge and belief, as well as the informational
             consequences of communication between agents.</p>
             <p>
-              In DEL, agents are characterized by their knowledge and beliefs. For example, 
+              In DEL, agents are characterized by their knowledge and beliefs. For example,
               the operator Kaφ represents “Agent a knows that φ,” indicating that agent
             a is certain about the truth of φ. Similarly, the operator Baφ represents “Agent
             a believes that φ” indicating that agent a considers φ to be true, but may not
@@ -126,8 +126,8 @@
             </p>
             <p>
               DEL introduces additional operators to represent actions and informational
-            updates. The action operators describe the effects of actions on agents’ knowledge 
-            and beliefs. For instance, the operator [α]φ represents the result of performing 
+            updates. The action operators describe the effects of actions on agents’ knowledge
+            and beliefs. For instance, the operator [α]φ represents the result of performing
             an action α, which leads to the formula φ being true in the resulting
             state. Actions here are not restricted to physical actions, we can also allow for
             epistemical actions.
@@ -158,14 +158,14 @@
             <em>w</em><sub>0</sub> in the agent’s perspective to a world <em>w</em><sub>1</sub> in the agent’s perspective where p
             doesn’t hold if p is in the agents’ knowledge base, or if the relation points to a
             world <em>w</em><sub>1</sub> not in the agent’s perspective</p>
-            
+
             <h1 class="text-h5 font-weight-bold">Private announcements</h1>
-            <p>Dynamic Epistemic Logic includes announcements in which information is communicated 
-              to agents. A common form of these announcements are public announcements 
+            <p>Dynamic Epistemic Logic includes announcements in which information is communicated
+              to agents. A common form of these announcements are public announcements
               the announcement operator [!φ]Φ represents an announcement of
               φ to all agents, resulting in the formula Φ becoming true in the updated state.
               For distributed computer networks, public announcements do not accurately
-              represent how information is propagated through these systems. Typical information 
+              represent how information is propagated through these systems. Typical information
               may be relayed across individual agents, and errors or broken links may
               lead to individual agents missing information.</p>
               <p>For our purposes, we will consider private announcements as a modification
@@ -187,8 +187,6 @@
                 implementation, so we can use it in combinations with the operators already
                 defined.
               </p>
-
-              <h1 class="text-h5 font-weight-bold">Link-Cutting</h1>
           </v-sheet>
         </v-col>
       </v-row>
@@ -199,7 +197,7 @@
             <h1 class="text-h4 font-weight-bold" id="example">Example Case</h1>
             <p>As an example to demonstrate private announcements, we consider a case where
             a person wants to buy something from Amazon. In this scenario, there are three
-            parties: The Person, Amazon, and the Bank. Due to security and privacy reasons, 
+            parties: The Person, Amazon, and the Bank. Due to security and privacy reasons,
             the online transaction procedure is designed such that Amazon cannot
             access private banking information of the Person, and the bank cannot know
             the details and subject of the transaction between the Person and Amazon.
@@ -241,7 +239,7 @@ class="math inline"><em>M</em> ⊨ <em>E</em><em>p</em> ∧ ¬<em>K</em>
             <h1 class="text-h4 font-weight-bold" id="Simulation">Simulation</h1>
             <p>
             We aim to implement as part of our website a small simulation of a network
-            evolving and the knowledge of the nodes, as well as the Kripke model representing 
+            evolving and the knowledge of the nodes, as well as the Kripke model representing
             this simulated network.
             </p>
             <p>The basis for the simulation is a so-called network model, which describes a
@@ -263,7 +261,7 @@ class="math inline"><em>M</em> ⊨ <em>E</em><em>p</em> ∧ ¬<em>K</em>
             <h1 class="text-h4 font-weight-bold" ref="discussion">Discussion</h1>
             <p>This project set out to model the propagation of knowledge through distributed
             systems using private announcements in a Kripke model. To achieve this, we
-            extended the already useful MLSolver software to handle the propagation of epistemic 
+            extended the already useful MLSolver software to handle the propagation of epistemic
             information through distributed systems. This extension works through
             the introduction of private announcements. With these privately announcements
             being an appropriate representation of communication within distributed
