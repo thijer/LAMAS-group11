@@ -210,6 +210,18 @@
         <v-col cols="auto">
           <v-sheet>
             <h1 class="text-h4 font-weight-bold" id="example">Example Case</h1>
+            <v-row class="d-flex align-center justify-center pa-5  text-justify">
+              <v-col cols="auto">
+                <v-card class="text-center" width="350">
+                  <v-img class="text-center mx-auto" src="@/assets/s0_nw_model.png" :width="300"></v-img>
+                  <v-card-title class="text-h6">
+                    Figure 1
+                    <br>
+                    <span class="text-caption">caption</span>
+                  </v-card-title>
+                </v-card>
+              </v-col>
+            </v-row>
             <p>As an example to demonstrate private announcements, we consider a case where
               a person wants to buy something from Amazon. In this scenario, there are three
               parties: The Person, Amazon, and the Bank. Due to security and privacy reasons,
@@ -221,6 +233,89 @@
               the edges indicate which agent can communicate with which agent. In this state,
               the payment has not yet been made. The corresponding Kripke model can be
               found in 2.</p>
+            <v-row class="d-flex align-center justify-center pa-5  text-justify">
+              <v-col cols="auto">
+                <v-card class="text-center" width="auto">
+                  <v-row>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s0_km_me.png" :width="figWidth"></v-img>
+                    </v-col>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s0_km_amazon.png" :width="figWidth"></v-img>
+                    </v-col>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s0_km_bank.png" :width="figWidth"></v-img>
+                    </v-col>
+                  </v-row> 
+                  <v-card-title class="text-h6">
+                    Figure 2
+                    <br>
+                    <span class="text-caption">caption</span>
+                  </v-card-title>
+                </v-card>
+              </v-col>
+              <v-col cols="auto">
+                <v-card class="text-center" width="auto">
+                  <v-row>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s1_km_me.png" :width="figWidth"></v-img>
+                    </v-col>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s1_km_amazon.png" :width="figWidth"></v-img>
+                    </v-col>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s1_km_bank.png" :width="figWidth"></v-img>
+                    </v-col>
+                  </v-row> 
+                  <v-card-title class="text-h6">
+                    Figure 3
+                    <br>
+                    <span class="text-caption">caption</span>
+                  </v-card-title>
+                </v-card>
+              </v-col>
+              <v-col cols="auto">
+                <v-card class="text-center" width="auto">
+                  <v-row>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s2_km_me.png" :width="figWidth"></v-img>
+                    </v-col>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s2_km_amazon.png" :width="figWidth"></v-img>
+                    </v-col>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s2_km_bank.png" :width="figWidth"></v-img>
+                    </v-col>
+                  </v-row> 
+                  <v-card-title class="text-h6">
+                    Figure 4
+                    <br>
+                    <span class="text-caption">caption</span>
+                  </v-card-title>
+                </v-card>
+              </v-col>
+              <v-col cols="auto">
+                <v-card class="text-center" width="auto">
+                  <v-row>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s3_km_me.png" :width="figWidth"></v-img>
+                    </v-col>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s3_km_amazon.png" :width="figWidth"></v-img>
+                    </v-col>
+                    <v-col>
+                      <v-img class="text-center mx-auto" src="@/assets/s3_km_bank.png" :width="figWidth"></v-img>
+                    </v-col>
+                  </v-row> 
+                  <v-card-title class="text-h6">
+                    Figure 5
+                    <br>
+                    <span class="text-caption">caption</span>
+                  </v-card-title>
+                </v-card>
+              </v-col>
+            </v-row>
+              
             <p>
               The first private announcement happens between the Person and the Bank,
               when the Person confirms the payment to Amazon in the online transaction
@@ -300,16 +395,18 @@
         </v-col>
       </v-row>
 
-      <v-row class="d-flex align-center justify-center pa-5  text-justify" id="References">
+      <v-row class="d-flex align-center justify-center pa-5  text-left" id="References">
         <v-col cols="auto">
           <v-sheet>
             <h1 class="text-h4 font-weight-bold" ref="references">References</h1>
             <ol>
-              <li>J.-J. Ch. Meyer and W. van der Hoek. <em>Epistemic Logic for AI and Computer Science.</em></Epistemic>
+              <li>J.-J. Ch. Meyer and W. van der Hoek. <em>Epistemic Logic for AI and Computer Science.</em>
                 Cambridge Tracts in Theoretical Computer Science. Cambridge University Press, 1995. doi:
-                10.1017/CBO9780511569852.</li>
+                10.1017/CBO9780511569852.
+              </li>
               <li>Erik Rohkohl. <em>Modal logic solver.</em> <a
-                  href="https://github.com/erohkohl/mlsolver">https://github.com/erohkohl/mlsolver</a>. 2017.</li>
+                  href="https://github.com/erohkohl/mlsolver">https://github.com/erohkohl/mlsolver</a>. 2017.
+              </li>
               <li>Naomi Schraer. <em>Customers charged multiple times after Deliveroo app crash - here's ...</em> Sept.
                 2018. <a
                   href="https://www.moneysavingexpert.com/news/2018/09/deliveroo-crash-leaves-customers-charged-multiple-times/226">https://www.moneysavingexpert.com/news/2018/09/deliveroo-crash-leaves-customers-charged-multiple-times/226</a>
@@ -325,6 +422,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 //
+const figWidth = 250
 
 
 function scrollToElement(el) {
