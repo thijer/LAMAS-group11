@@ -6,6 +6,7 @@
       <div class="text-body-2 font-weight-light mt-5 mb-n0">Lamas Group 11</div>
 
       <h1 class="text-h2 font-weight-bold">Epistemic Reasoning in Computer Networks</h1>
+      <a href="https://github.com/thijer/LAMAS-group11" target="_blank">https://github.com/thijer/LAMAS-group11</a>
       <!-- <h1 class="text-h3 font-weight-bold"></h1> -->
 
       <div class="py-5" />
@@ -69,8 +70,8 @@
               reason about the knowledge and beliefs of the nodes in the network.
             </p>
             <p>
-              There are many ways in which epistemic logic can be applied to modern de-
-              centralized computer systems: knowledge representation, fault tolerance, consensus 
+              There are many ways in which epistemic logic can be applied to modern decentralized 
+              computer systems: knowledge representation, fault tolerance, consensus 
               protocols, and reasoning regarding security and privacy.
             </p>
             <p>
@@ -93,7 +94,7 @@
             <p>
               Our research question is:
             </p>
-            <p class="font-italic">Can the knowledge propagated using private announcements in a decentralized
+            <p class="font-italic text-center">Can the knowledge propagated using private announcements in a decentralized
             system be accurately modelled using Kripke models?</p>
             <p>The model would need to accurately model the various worlds created by
             the network structure and the traffic routing. The various nodes in the network 
@@ -117,17 +118,17 @@
             the effects of actions on knowledge and belief, as well as the informational
             consequences of communication between agents.</p>
             <p>
-              In DEL, agents are characterized by their knowledge and beliefs. For exam-
-            ple, the operator Kaφ represents “Agent a knows that φ,” indicating that agent
+              In DEL, agents are characterized by their knowledge and beliefs. For example, 
+              the operator Kaφ represents “Agent a knows that φ,” indicating that agent
             a is certain about the truth of φ. Similarly, the operator Baφ represents “Agent
             a believes that φ” indicating that agent a considers φ to be true, but may not
             be certain.
             </p>
             <p>
               DEL introduces additional operators to represent actions and informational
-            updates. The action operators describe the effects of actions on agents’ knowl-
-            edge and beliefs. For instance, the operator [α]φ represents the result of per-
-            forming an action α, which leads to the formula φ being true in the resulting
+            updates. The action operators describe the effects of actions on agents’ knowledge 
+            and beliefs. For instance, the operator [α]φ represents the result of performing 
+            an action α, which leads to the formula φ being true in the resulting
             state. Actions here are not restricted to physical actions, we can also allow for
             epistemical actions.
             </p>
@@ -159,13 +160,13 @@
             world <em>w</em><sub>1</sub> not in the agent’s perspective</p>
             
             <h1 class="text-h5 font-weight-bold">Private announcements</h1>
-            <p>Dynamic Epistemic Logic includes announcements in which information is com-
-              municated to agents. A common form of these announcements are public an-
-              nouncements the announcement operator [!φ]Φ represents an announcement of
+            <p>Dynamic Epistemic Logic includes announcements in which information is communicated 
+              to agents. A common form of these announcements are public announcements 
+              the announcement operator [!φ]Φ represents an announcement of
               φ to all agents, resulting in the formula Φ becoming true in the updated state.
               For distributed computer networks, public announcements do not accurately
-              represent how information is propagated through these systems. Typical infor-
-              mation may be relayed across individual agents, and errors or broken links may
+              represent how information is propagated through these systems. Typical information 
+              may be relayed across individual agents, and errors or broken links may
               lead to individual agents missing information.</p>
               <p>For our purposes, we will consider private announcements as a modification
               of public announcements, where only a subset of agents (or in a Kripke model,
@@ -198,12 +199,11 @@
             <h1 class="text-h4 font-weight-bold" id="example">Example Case</h1>
             <p>As an example to demonstrate private announcements, we consider a case where
             a person wants to buy something from Amazon. In this scenario, there are three
-            parties: The Person, Amazon, and the Bank. Due to security and privacy rea-
-            sons, the online transaction procedure is designed such that Amazon cannot
+            parties: The Person, Amazon, and the Bank. Due to security and privacy reasons, 
+            the online transaction procedure is designed such that Amazon cannot
             access private banking information of the Person, and the bank cannot know
             the details and subject of the transaction between the Person and Amazon.
-            This leads to the case where transaction progress is modelled with Private an-
-            nouncements.</p>
+            This leads to the case where transaction progress is modelled with Private announcements.</p>
             <p>The associated network model of this example can be found in figure 1, where
               the edges indicate which agent can communicate with which agent. In this state,
               the payment has not yet been made. The corresponding Kripke model can be
@@ -241,8 +241,8 @@ class="math inline"><em>M</em> ⊨ <em>E</em><em>p</em> ∧ ¬<em>K</em>
             <h1 class="text-h4 font-weight-bold" id="Simulation">Simulation</h1>
             <p>
             We aim to implement as part of our website a small simulation of a network
-            evolving and the knowledge of the nodes, as well as the Kripke model represent-
-            ing this simulated network.
+            evolving and the knowledge of the nodes, as well as the Kripke model representing 
+            this simulated network.
             </p>
             <p>The basis for the simulation is a so-called network model, which describes a
             set of agents, a knowledge base of propositional atoms for each agent, and a set
@@ -263,15 +263,15 @@ class="math inline"><em>M</em> ⊨ <em>E</em><em>p</em> ∧ ¬<em>K</em>
             <h1 class="text-h4 font-weight-bold" ref="discussion">Discussion</h1>
             <p>This project set out to model the propagation of knowledge through distributed
             systems using private announcements in a Kripke model. To achieve this, we
-            extended the already useful MLSolver software to handle the propagation of epis-
-            temic information through distributed systems. This extension works through
-            the introduction of private announcements. With these privately announce-
-            ments being an appropriate representation of communication within distributed
+            extended the already useful MLSolver software to handle the propagation of epistemic 
+            information through distributed systems. This extension works through
+            the introduction of private announcements. With these privately announcements
+            being an appropriate representation of communication within distributed
             systems.</p>
             <p>Private announcements lead to ever more complex models, as the number
             of worlds increases dramatically as private announcements occur. With larger
-            models with more systems, for example modelling a large blockchain, represent-
-            ing such systems may become computationally more complex.</p>
+            models with more systems, for example modelling a large blockchain, representing such
+             systems may become computationally more complex.</p>
             <p>There are many ways this work could be extended. For one, additional
             elements of Dynamic Epistemic Logic could be added, further extending the
             utility of MLSolver. If this tool were to become a more useful tool for modelling
