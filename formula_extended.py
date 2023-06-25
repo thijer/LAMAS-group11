@@ -45,6 +45,7 @@ class PrivateAnnouncement:
         return "PrA_{0}[{1}] {2}".format(self.agents, self.announcement, self.inner)
         # else:
         #     return "PrA_{0}[{1}] ({2})".format(self.agents, self.announcement, self.inner)
+        return "PrA_{0}[{1}] {2}".format(self.agents, self.announcement, self.inner)
 
 class CommonKnowledge:
     """ Common Knowledge operator, as defined by Meyer and van der Hoek. """

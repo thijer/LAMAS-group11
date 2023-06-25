@@ -79,6 +79,14 @@ def test_simple_3a():
     km = convert(model["networks"])
     world = "03_0"
 
+    
+    evaluate(
+        "At first, 03 does not know that 02 knows \"p\".",
+        Not(Knows("03", K("02", Atom("p")))),
+        km, "03_0"
+    )
+
+    
     evaluate(
         "At first, 03 does not know \"p\".",
         Not(Knows("03", Atom("p"))),
@@ -196,4 +204,4 @@ def test_simple_3a():
     )
 
 if __name__ == "__main__":
-    test_2x2()
+    test_simple_3a()
