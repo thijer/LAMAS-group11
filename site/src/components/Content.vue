@@ -247,9 +247,6 @@ class="math inline"><em>M</em> ⊨ <em>E</em><em>p</em> ∧ ¬<em>K</em>
             of connections indicating which agent can communicate with each other. Such
             a network model can then be converted to a Kripke model, where the states are
             now defined by a combination of every propositional atom and their valuation.</p>
-            <p>The way the model will evolve will cover the information propagating through
-            the network, changes to the network including new nodes being added, nodes
-            removed and temporary breaks in connections resulting in routing changes.</p>
           </v-sheet>
         </v-col>
       </v-row>
