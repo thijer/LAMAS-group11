@@ -260,7 +260,7 @@ class="math inline"><em>M</em> ⊨ <em>E</em><em>p</em> ∧ ¬<em>K</em>
       <v-row class="d-flex align-center justify-center pa-5  text-justify" id="Discussion">
         <v-col cols="auto">
           <v-sheet>
-            <h1 class="text-h4 font-weight-bold" ref="discussion">Discussion</h1>
+            <h1 class="text-h4 font-weight-bold">Discussion</h1>
             <p>This project set out to model the propagation of knowledge through distributed
             systems using private announcements in a Kripke model. To achieve this, we
             extended the already useful MLSolver software to handle the propagation of epistemic 
@@ -282,6 +282,14 @@ class="math inline"><em>M</em> ⊨ <em>E</em><em>p</em> ∧ ¬<em>K</em>
             altering of information of a node. Such errors may come about due to faults
             or malicious actions, but it is clear that for distributed systems, such as a
             blockchain, to be fault-tolerant such errors must be included in a model.</p>
+          </v-sheet>
+        </v-col>
+      </v-row>
+      <v-row class="d-flex align-center justify-left pa-5  text-justify" id="References">
+        <v-col cols="auto">
+          <v-sheet>
+            <h1 class="text-h4 font-weight-bold">References</h1>
+            <p></p>
           </v-sheet>
         </v-col>
       </v-row>
